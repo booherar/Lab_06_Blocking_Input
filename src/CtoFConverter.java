@@ -1,7 +1,6 @@
 import java.util.Scanner;
-import java.util.Random;
 
-public class Main {
+public class CtoFConverter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String trash = "";
@@ -18,9 +17,6 @@ public class Main {
             System.out.println("Invalid input. Please enter a valid number for Celsius.");
         }
     } while (true);
-
-
-
 
     }
 }
