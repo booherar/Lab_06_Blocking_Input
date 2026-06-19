@@ -1,31 +1,11 @@
 import java.util.Scanner;
-import java.util.random.RandomGenerator;
 
-public class CtoFConverter {
+public class FuelCosts {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String trash = "";
-        double Celsius;
-        double Fahrenheit;
-    do {
-        System.out.print("Enter a temperature in Celsius: ");
-        if (scanner.hasNextDouble()) {
-            Celsius = scanner.nextDouble();
-            Fahrenheit = (Celsius * 9 / 5) + 32;
-            System.out.printf("%.2f degrees Celsius is equal to %.2f degrees Fahrenheit.%n", Celsius, Fahrenheit);
-        } else {
-            trash = scanner.nextLine(); // Consume the invalid input
-            System.out.println("Invalid input. Please enter a valid number for Celsius.");
-        }
-    } while (true);
-
-    }
-public class FuelCosts{
-        public static void main(String[] args) {
-          Scanner scanner = new Scanner(System.in);
-          double gallonGasTank;
-          double mpg;
-          double pricePerGallon;
+        double gallonGasTank;
+        double mpg;
+        double pricePerGallon;
         do {
             System.out.print("Enter the number of gallons of gas in the tank in gallons: ");
             if (scanner.hasNextDouble()) {
@@ -36,9 +16,9 @@ public class FuelCosts{
                     System.out.print("Enter the price per gallon of gas: ");
                     if (scanner.hasNextDouble()) {
                         pricePerGallon = scanner.nextDouble();
-                        double costToFillTank = gallonGasTank * pricePerGallon;
+                        double costToDrive = (100 / mpg) * pricePerGallon;
                         double distanceOnFullTank = gallonGasTank * mpg;
-                        System.out.printf("The cost to fill the tank is $%.2f.%n", costToFillTank);
+                        System.out.printf("The cost to drive 100 miles is $%.2f.%n", costToDrive);
                         System.out.printf("The distance the vehicle can travel on a full tank is %.2f miles.%n", distanceOnFullTank);
                     } else {
                         System.out.println("Invalid input for price per gallon. Please enter a valid number.");
@@ -51,10 +31,7 @@ public class FuelCosts{
             } else {
                 System.out.println("Invalid input for size of gas tank. Please enter a valid number.");
                 scanner.nextLine(); // Consume the invalid input
-        }
-        }while (true);
-
-    }
+            }
+        } while (true);
     }
 }
-
